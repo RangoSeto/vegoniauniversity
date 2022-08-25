@@ -2,6 +2,7 @@
 
 :root{
 	--primary-color: darkviolet;
+	--secondary-color: darkblue;
 	--primary-grad-color: linear-gradient(to left,darkviolet,deepskyblue);
 }
 
@@ -53,6 +54,8 @@ body{
 header{
 	height: 80vh;
 	background: var(--primary-grad-color);
+
+	position: relative;
 }
 
 /*Start Nav Bar*/
@@ -102,6 +105,106 @@ header{
 
 	transform: translate(-50%,-50%);
 }
+
+.bannerheaders{
+	font-weight: bold;
+	letter-spacing: 3px;
+	animation-name: bnanis;
+	animation-duration: 2s;
+}
+
+.bannerparagraphs,.banner-btn{
+	animation-name: bnanis;
+	animation-duration: 2s;
+	animation-delay: .5s;
+
+	animation-fill-mode: backwards;
+}
+
+@keyframes bnanis{
+	from {
+		transform: translateY(100px);
+		opacity:0;
+	}
+	to{
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
 /*End Banner*/
 
+.studentgroups{
+	width: 40%;
+
+	position: absolute;
+	left:0;
+	bottom: 0;
+	z-index: 1;
+}
+.waves{
+	width: 100%;
+
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+
+	z-index: 2;
+}
+
 /*End Header Setion*/
+
+/*Start Students Counter Section*/
+.counters{
+	width: 100%;
+	height: 20vh;
+	font-weight: bold;
+	letter-spacing: 2px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*.counters .container{
+	display: flex;
+}*/
+.counteritems{
+	width: 25%;
+	text-align: center;
+
+	float: left;
+
+	border-right: 1px solid rgba(0,0,0,0.4);
+}
+.counteritems:last-child{
+	border-right: none;
+}
+
+.counteritems .fas{
+	background: var(--primary-grad-color);
+	color: transparent;
+	-webkit-background-clip: text;
+}
+
+.counteritems h5{
+	font-size: 15px;
+	font-weight: bold;
+}
+/*End Students Counters Section*/
+
+/*Start About US Section*/
+.aboutuss{
+	background-image:linear-gradient(
+		rgba(0,0,0,0.3),
+		rgba(0,0,0,0.3)
+	), url('../assets/img/banner/banner4.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.aboutuss ul li{
+	list-style-type: none;
+	background-color: var(--secondary-color);
+	margin: 20px 0;
+}
+/*End About Us Section*/
