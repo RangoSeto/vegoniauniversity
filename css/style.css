@@ -350,3 +350,24 @@ nav{
 	color: #fff;
 }
 /*End Location Area Section*/
+
+/*Start Features Section*/
+
+.features{
+	background-color: var(--secondary-color);
+}
+
+.feas img{
+	transform: rotateY(0) scale(0.5);
+
+	transition: transform .5s;
+}
+
+.feas:hover img{
+	transform: rotateY(1turn) scale(1);
+}
+.feas p{
+	font-size: 12px;
+}
+
+/*End Features Section*/
