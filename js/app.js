@@ -52,4 +52,36 @@ getcountervalues.forEach(function(getcountervalue){
 
 // End Students Counter Section
 
+// Start Rating Section
+// start google code for chart
+google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Myanmar',     8],
+          ['Thailand',      2],
+          ['Singpore',  4],
+          ['Indonesia', 2],
+          ['Srilanks',    8]
+        ]);
+
+        var options = {
+          title: 'International Students',
+          // is3D: true
+          width: 450, //unit ထည့်ချင်ရင်''ထဲထည့်ရေး
+          height: 400,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+// end google code for chart
+
+// End Rating Section
+
+
 // End Javascript Area
