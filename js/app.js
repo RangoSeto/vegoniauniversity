@@ -10,6 +10,20 @@ $(document).ready(function(){
 
 		// End Nav Bar
 	// End Header
+
+
+
+	// Start Login Box
+	$("#openform").click(function(){
+		document.getElementById("form-popup").style.display = "block";
+	});
+
+	$("#formclose-btn").click(function(){
+		document.getElementById("form-popup").style.display = "none";
+	});
+
+	// End Login Box
+
 });
 
 // End Jquery Area
@@ -32,10 +46,10 @@ getcountervalues.forEach(function(getcountervalue){
 
 		const getcttarget = +getcountervalue.getAttribute('data-target');
 		// console.log(getcttarget);
-		console.log(typeof getcttarget,getcttarget);
+		// console.log(typeof sgetcttarget,getcttarget);
 
 		const getctcontent = +getcountervalue.innerText;
-		console.log(typeof getctcontent,getctcontent);
+		// console.log(typeof getctcontent,getctcontent);
 
 		const incnumber = getcttarget / 100;
 		console.log(incnumber);
@@ -82,6 +96,10 @@ google.charts.load('current', {'packages':['corechart']});
 // end google code for chart
 
 // End Rating Section
+
+const getyear = document.getElementById('getyear');
+const getfullyear = new Date().getUTCFullYear();
+getyear.textContent = getfullyear;
 
 
 // End Javascript Area
